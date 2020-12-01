@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layoutDescription="@xml/scene_03">
+
+    <com.nomtek.animations.demo.views.ContentView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/skyBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="Title"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Content"
+            android:textSize="20dp" />
+
+    </com.nomtek.animations.demo.views.ContentView>
+
+    <com.nomtek.animations.demo.views.SidePanelView
+        android:id="@+id/sidePanelView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/md_orange_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/menuView"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Menu"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </FrameLayout>
+
+    </com.nomtek.animations.demo.views.SidePanelView>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView">
+
+    <Button
+        android:id="@+id/animateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Animate" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/android" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/secondImageView"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="start|bottom"
+        android:src="@drawable/ic_droid" />
+
+
+</FrameLayout>

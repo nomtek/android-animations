@@ -1,0 +1,48 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="snackbarStyle">@style/MySnackbarStyle</item>
+
+    </style>
+
+    <style name="MySnackbarStyle" parent="Widget.Design.Snackbar">
+        <item name="animationMode">slide</item>
+    </style>
+
+    <style name="BluePrimaryButton" parent="Theme.AppCompat.Light">
+        <item name="android:colorBackground">@android:color/black</item>
+    </style>
+
+    <style name="CollapsedExpandedTitleText" parent="AppTheme">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.App.CollapsingToolbar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- ToolBar -->
+    <style name="ToolBarStyle" parent="AppTheme">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

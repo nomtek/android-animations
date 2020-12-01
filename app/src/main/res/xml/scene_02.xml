@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@+id/button"
+            motion:touchAnchorSide="right"
+            motion:touchRegionId="@+id/button" />
+
+        <KeyFrameSet>
+
+            <KeyCycle
+                motion:framePosition="0"
+                motion:motionTarget="@+id/button"
+                motion:wavePeriod="2"
+                motion:waveOffset="0"
+                motion:waveShape="sin"
+                android:translationY="-70dp"/>
+
+            <KeyAttribute
+                android:rotation="-45"
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="60"
+                motion:motionTarget="@id/imageView" />
+
+            <KeyTimeCycle
+                motion:framePosition="0"
+                motion:motionTarget="@+id/droidImageView"
+                motion:wavePeriod="0.5"
+                motion:waveOffset="1"
+                motion:waveShape="sin"
+                android:scaleX="1.1"
+                android:scaleY="1.1"/>
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#D81B60" />
+
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customFloatValue="0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#ECAB70" />
+
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customFloatValue="1" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

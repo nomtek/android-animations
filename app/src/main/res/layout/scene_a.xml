@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scene_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/skyBlue"
+        android:textSize="24sp"
+        android:text="Text Line 1" />
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:textSize="24sp"
+        android:text="Text Line 2" />
+</LinearLayout>

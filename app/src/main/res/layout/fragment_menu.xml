@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Menu"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/progressButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Progress button" />
+
+        <Button
+            android:id="@+id/transformationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Morph transformations" />
+
+        <Button
+            android:id="@+id/springButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spring" />
+
+        <Button
+            android:id="@+id/flingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fling" />
+
+        <Button
+            android:id="@+id/layoutChangesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animate layout changes" />
+
+        <Button
+            android:id="@+id/transitionLayoutChangesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transition layout changes" />
+
+        <Button
+            android:id="@+id/sceneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scene transitions" />
+
+        <Button
+            android:id="@+id/constraintSetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Constraint set" />
+
+        <Button
+            android:id="@+id/activityTransitionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity transition" />
+
+        <Button
+            android:id="@+id/motionLayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motion" />
+
+        <Button
+            android:id="@+id/otherMotionLayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Second motion" />
+
+        <Button
+            android:id="@+id/sidePanelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Side panel" />
+
+        <Button
+            android:id="@+id/vectorDrawableButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vector drawable" />
+
+        <Button
+            android:id="@+id/coordinatorLayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coordinator layout" />
+
+        <Button
+            android:id="@+id/bottomSheetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bottom sheet" />
+
+
+    </LinearLayout>
+
+</ScrollView>

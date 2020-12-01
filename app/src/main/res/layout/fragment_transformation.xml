@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transformationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:transformation_duration="550"
+        app:transformation_targetView="@+id/myCardView">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_write"
+            app:tint="@null" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/myCardView"
+        android:layout_width="240dp"
+        android:layout_height="312dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transformationActivityLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:transformation_duration="550">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_baseline_movie_24"
+            app:tint="@null" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
