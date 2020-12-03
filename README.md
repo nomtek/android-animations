@@ -22,5 +22,5 @@
 <img src="./gifs/activity_transition.gif" width="250">
 10. MotionLayout - basics. You can find documentation [here](https://developer.android.com/training/constraint-layout/motionlayout). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/MotionLayoutFragment.kt).
 <img src="./gifs/motion.gif" width="250">
-11. MotionLayout - key cycles. You can find documentation [here](https://developer.android.com/reference/androidx/constraintlayout/motion/widget/MotionLayout#keycycle). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/MotionLayoutFragment.kt).
-<img src="./gifs/motion.gif" width="250">
+11. MotionLayout - key cycles. You can find documentation [here](https://developer.android.com/reference/androidx/constraintlayout/motion/widget/MotionLayout#keycycle). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/OtherMotionLayoutFragment.kt).
+<img src="./gifs/key_cycles.gif" width="250">
