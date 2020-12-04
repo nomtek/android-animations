@@ -13,14 +13,24 @@ You can find library repository [here](https://github.com/skydoves/Transformatio
 \
 ![](./gifs/transformation.gif)
 ### 3. Spring animation
+Use this if you need physics based animation. You can customize spring's stiffness, damping ratio and its final position to achieve real like motion.
 You can find documentation [here](https://developer.android.com/reference/androidx/dynamicanimation/animation/SpringAnimation). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/SpringFragment.kt).\
 \
 ![](./gifs/spring.gif)
 ### 4. Fling animation
+In fling animation you can customize friction and starting velocity. Friction force will be proportional to object's velocity.
 You can find documentation [here](https://developer.android.com/guide/topics/graphics/fling-animation). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/FlingFragment.kt).\
 \
 ![](./gifs/fling.gif)
 ### 5. Animate layout changes
+`android:animateLayoutChanges` flag is a great and easy way to breathe life into your application. We can use this flag on any ViewGroup.
+ Android framework will then automatically animate layout changes caused by any of the following actions:
+- adding view
+- removing view
+- changing view visibility
+- resizing view
+<!-- -->
+We can also customize animation by modifying LayoutTransition object. Have in mind that this API is quite old and limited so you won't be able to achieve every effect you wish for.
 You can find documentation [here](https://developer.android.com/reference/android/animation/LayoutTransition). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/LayoutChangesFragment.kt).\
 \
 ![](./gifs/animate_layout_changes.gif)
