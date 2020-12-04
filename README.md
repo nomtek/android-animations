@@ -8,7 +8,7 @@ You can find library repository [here](https://github.com/leandroBorgesFerreira/
 ### 2. TransformationLayout
 Transform view into another view using morph animation. You can also morph between two activities or fragments.
 This is very nice looking effect that helps your user to better understand changes happening on the screen.
-TransformationLayout uses MaterialContainerTransform from com.google.android.material:material to achieve the effect.
+TransformationLayout uses *MaterialContainerTransform* from com.google.android.material:material to achieve the effect.
 You can find library repository [here](https://github.com/skydoves/TransformationLayout). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/TransformationFragment.kt).\
 \
 ![](./gifs/transformation.gif)
@@ -23,22 +23,45 @@ You can find documentation [here](https://developer.android.com/guide/topics/gra
 \
 ![](./gifs/fling.gif)
 ### 5. Animate layout changes
-`android:animateLayoutChanges` flag is a great and easy way to breathe life into your application. We can use this flag on any ViewGroup.
+`android:animateLayoutChanges` flag is a great and easy way to breathe life into your application. We can use this flag on any *ViewGroup*.
  Android framework will then automatically animate layout changes caused by any of the following actions:
 - adding view
 - removing view
 - changing view visibility
 - resizing view
 <!-- -->
-We can also customize animation by modifying LayoutTransition object. Have in mind that this API is quite old and limited so you won't be able to achieve every effect you wish for.
+We can also customize animation by modifying *LayoutTransition* object. Have in mind that this API is quite old and limited so you won't be able to achieve every effect you wish for.
 You can find documentation [here](https://developer.android.com/reference/android/animation/LayoutTransition). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/LayoutChangesFragment.kt).\
 \
 ![](./gifs/animate_layout_changes.gif)
 ### 6. Transitions API
+Transition framework makes it easy to animate various changes in your application’s UI by simply providing the starting layout and the ending layout. You can describe what kind of animations you would like to use (fade in, fade out, translation) and the transition library will figure out how to animate from the starting layout to the ending layout.
+You can use transition framework to animate between activities or fragments. You also animate simple layout changes.
+We can animate layout changes simply by calling
+```
+TransitionManager.beginDelayedTransition(view)
+```
+We can specify custom transitions for concrete views and control animation order.
+We might also want to create custom transitions if required animation isn’t supported by one of the default transitions.
+Have in mind that Transitions API has some limitations:
+- Animations applied to *SurfaceView* or *TextureView* might not be displayed correctly.
+- Classes extending *AdapterView* like *ListView* are incompatible with Transitions framework.
+- If you resize widget with text then text will not be animated. It will just pop to the location
+<!-- -->
 You can find documentation [here](https://developer.android.com/training/transitions). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/TransitionLayoutChangesFragment.kt).\
 \
 ![](./gifs/transitions.gif)
-### 7. Scenes API
+### 7. Transitions API - Scenes
+To animate between two layouts with Transitions framework you should use scenes API.
+To create animation:
+1. Create two *Scene* objects - one for the starting layout and second one for ending layout.
+2. Create *Transition* object. You customize animations and order.
+3. Invoke *TransitionManager.go()*
+<!-- -->
+\
+![](./gifs/scenes.png)
+\
+\
 You can find documentation [here](https://developer.android.com/reference/android/transition/Scene). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/SceneFragment.kt).\
 \
 ![](./gifs/scenes.gif)
