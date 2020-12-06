@@ -66,34 +66,62 @@ You can find documentation [here](https://developer.android.com/reference/androi
 \
 ![](./gifs/scenes.gif)
 ### 8. ConstraintSet
+*ConstraintSet* lets you manipulate set of constraints of *ConstraintLayout*. You can combine manipulating constraint set with Transition API to achieve complex animations easily!
 You can find documentation [here](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintSet). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/ConstraintSetFragment.kt).\
 \
 ![](./gifs/constraint.gif)
 ### 9. Activity transition
+You can use Transitions API for activity transitions as well. You can provide enter and exit transitions. You can also specify transition for shared elements between two activities.
+```
+val options = ActivityOptions.makeSceneTransitionAnimation(this, androidRobotView, "robot")
+// start the new activity
+startActivity(intent, options.toBundle())
+```
+Thanks to this shared elements from one activity will seamlessly transition to second activity.
 You can find documentation [here](https://developer.android.com/training/transitions/start-activity). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/ActivityTransitionFragment.kt).\
 \
 ![](./gifs/activity_transition.gif)
 ### 10. MotionLayout - basics
+MotionLayout is a powerful layout that will let you create complex animations without line of code. It's fully declarative - you define transitions and interactions in xml.
+It's a subclass of *ConstraintLayout*. It uses underneath property animation framework and Transitions API.
+\
+![](./gifs/motion_layout.png)
+\
+\
 You can find documentation [here](https://developer.android.com/training/constraint-layout/motionlayout). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/MotionLayoutFragment.kt).\
 \
 ![](./gifs/motion.gif)
+\
+\
+You can see above debugging overlay. It will show you paths of widgets and will show animation frame rate.
+You can enable it with `app:motionDebug="SHOW_ALL"`.
 ### 11. MotionLayout - key cycles
 You can find documentation [here](https://developer.android.com/reference/androidx/constraintlayout/motion/widget/MotionLayout#keycycle). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/OtherMotionLayoutFragment.kt).\
 \
 ![](./gifs/key_cycles.gif)
 ### 12. Side panel
+Demonstration of what can be achieved with *MotionLayout* in few lines of code.
 Illustrates motion layout usage in practice Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/SidePanelFragment.kt).\
 \
 ![](./gifs/side_panel.gif)
 ### 13. Vector drawable
+Sometimes it's very useful to animate icons. For example you may need to create progress bar animation consisting of several images or maybe you would like to create animation where one icon morphs into another.
+Also I have good news for you. You can delegate creating animation to your designer! This [tool](https://shapeshifter.design/) will generate drawable xml.
 You can find documentation [here](https://developer.android.com/guide/topics/graphics/vector-drawable-resources). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/VectorDrawableFragment.kt).\
 \
 ![](./gifs/vector_drawable.gif)
-### 14. Coordinator layout
-You can find documentation [here](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/CoordinatorLayoutFragment.kt).\
+### 14. CoordinatorLayout
+This layout can be used for many things but most often you will use it with [AppBarLayout](https://developer.android.com/reference/com/google/android/material/appbar/AppBarLayout) to achieve complex toolbar animations.
+You can also create your own custom behaviours that will dictate how *CoordinatorLayout* children interact with each other.
+You might take a look at [ShrinkBehaviour](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/behaviour/ShrinkBehaviour.kt) to see how to create behaviour that will shrink you FAB
+when bottom panel slides in. You can also create more complex behaviours - take a look at the [SwipeToDismissBehaviour](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/behaviour/SwipeToDismissBehaviour.kt).
+This example illustrates also usage of *ViewDragHelper*, powerful class that makes detecting drag gestures much easier.
+You can find *CoordinatorLayout* documentation [here](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/CoordinatorLayoutFragment.kt).\
 \
 ![](./gifs/coordinator.gif)
 ### 15. Coordinator layout with BottomSheetBehavior
+Another popular use case with *CoordinatorLayout* is bottom sheet. Bottom sheet is a view that may be dragged by user to reveal its content.
+Yow will achieve this effect by applying *BottomSheetBehavior*.
 You can find documentation [here](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetBehavior). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/BottomSheetFragment.kt).\
 \
 ![](./gifs/bottom_sheet.gif)
