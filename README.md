@@ -82,7 +82,7 @@ You can find documentation [here](https://developer.android.com/training/transit
 \
 ![](./gifs/activity_transition.gif)
 ### 10. MotionLayout - basics
-MotionLayout is a powerful layout that will let you create complex animations without line of code. It's fully declarative - you define transitions and interactions in xml.
+MotionLayout is a powerful layout that will let you create complex animations without single line of code. It's fully declarative - you define transitions and interactions in xml.
 It's a subclass of *ConstraintLayout*. It uses underneath property animation framework and Transitions API.
 \
 ![](./gifs/motion_layout.png)
@@ -95,13 +95,27 @@ You can find documentation [here](https://developer.android.com/training/constra
 \
 You can see above debugging overlay. It will show you paths of widgets and will show animation frame rate.
 You can enable it with `app:motionDebug="SHOW_ALL"`.
-### 11. MotionLayout - key cycles
+### 11. MotionLayout - key frame set
+We can control how animation progresses thanks to *KeyFrameSet*.
+MotionLayout support various keyframes:
+1. KeyPosition - specifies a view’s position during the motion sequence
+2. KeyAttribute - specifies a view’s attribute value during the motion sequence
+3. KeyCycle - adds oscillation to the animation. You can specify *waveShape*, *waveOffset* and *wavePeriod*.
+4. KeyTimeCycle - a keyframe that allows you to define a cycle driven by time instead of by the transition
+<!-- -->
+Common keyframes attributes:
+- *framePosition* defines number of the frame (from 0 to 100)
+- *target* defines which view should be modified
+<!-- -->
+\
+It might be a little bit difficult to design complex animation with keyframes. Luckily you use [cycle editor](https://github.com/googlesamples/android-ConstraintLayoutExamples/releases/download/1.0/CycleEditor.jar)
+for that. It's the tool designed by Google developers that will let you to adjust your cycles in GUI environment.
 You can find documentation [here](https://developer.android.com/reference/androidx/constraintlayout/motion/widget/MotionLayout#keycycle). Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/OtherMotionLayoutFragment.kt).\
 \
 ![](./gifs/key_cycles.gif)
 ### 12. Side panel
 Demonstration of what can be achieved with *MotionLayout* in few lines of code.
-Illustrates motion layout usage in practice Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/SidePanelFragment.kt).\
+Example of usage [here](https://github.com/nomtek/android-animations/blob/master/app/src/main/java/com/nomtek/animations/demo/SidePanelFragment.kt).\
 \
 ![](./gifs/side_panel.gif)
 ### 13. Vector drawable
